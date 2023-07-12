@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: kube8
-  type: LoadBalancer  
+  type: LoadBalancer 
   ports:
     - protocol: TCP
       port: 5000
