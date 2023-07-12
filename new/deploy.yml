@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube8
+  namespace: suprith
+  labels:
+    app: kube8
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube8
+  template:
+    metadata:
+      labels:
+        app: kube8
+    spec:
+      containers:
+      - name: kube8
+        image: suprith5/kube8:1.0.1
+        ports:
+        - containerPort: 5000
