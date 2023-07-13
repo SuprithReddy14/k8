@@ -6,7 +6,7 @@ metadata:
   labels:
     app: kube8
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: kube8
@@ -17,6 +17,8 @@ spec:
     spec:
       containers:
       - name: kube8
-        image: suprith5/kube8:1.0.1
+        image: suprith.azurecr.io/kube8:1.0.1
         ports:
         - containerPort: 5000
+      imagePullSecrets:
+        - name: secretfile
