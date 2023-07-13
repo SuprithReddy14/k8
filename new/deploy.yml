@@ -20,5 +20,5 @@ spec:
         image: suprith.azurecr.io/kube8:1.0.1
         ports:
         - containerPort: 5000
-      imagePullSecrets:
-        - name: secretfile
+    imagePullSecrets:
+      - name: secretfile
