@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kube8
+  name: ready
   namespace: suprith
   labels:
-    app: kube8
+    app: ready
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kube8
+      app: ready
   template:
     metadata:
       labels:
-        app: kube8
+        app: ready
     spec:
       containers:
-      - name: kube8
-        image: suprith.azurecr.io/kube8:1.0.1
+      - name: ready
+        image: ready.azurecr.io/ready2.0
         ports:
         - containerPort: 5000
       imagePullSecrets:
-       - name: secretfile
+       - name: ready
