@@ -6,7 +6,7 @@ metadata:
   labels:
     app: kube8
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: kube8

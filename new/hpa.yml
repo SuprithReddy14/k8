@@ -1,0 +1,19 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: ready
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ready
+  minReplicas: 2
+  maxReplicas: 5
+  metrics:
+  -  type: Resource
+      resource:
+       name: cpu
+       target:
+         type: Utilization
+         averageUtilization: 50
+  
